@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title.food">Gastronomia · Rio Viva</title>
+  <meta name="description" content="Gastronomia do Rio de Janeiro." data-i18n-content="meta.desc.food">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="food">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumb"><a href="index.html" data-i18n="nav.home">Início</a> / <span data-i18n="nav.food">Gastronomia</span></div>
+        <h1 data-i18n="food.title">Gastronomia carioca</h1>
+        <p data-i18n="food.intro">Sabores que contam a história da cidade: botecos centenários, feijoada, frutos do mar e muito mais.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem">
+      <div class="container">
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab" role="tab" data-tab="dishes" id="tab-dishes" aria-controls="panel-dishes" aria-selected="true" data-i18n="food.tab.dishes">O que provar</button>
+          <button type="button" class="tab" role="tab" data-tab="places" id="tab-places" aria-controls="panel-places" aria-selected="false" data-i18n="food.tab.places">Onde comer</button>
+        </div>
+
+        <div class="tab-panel" id="panel-dishes" role="tabpanel" aria-labelledby="tab-dishes">
+          <div class="grid" id="dishes-grid"></div>
+        </div>
+
+        <div class="tab-panel" id="panel-places" role="tabpanel" aria-labelledby="tab-places" hidden>
+          <div class="toolbar">
+            <div class="chips" id="type-chips" role="group" data-i18n-aria="food.filters"></div>
+            <label class="visually-hidden" for="price" data-i18n="food.price.label">Faixa de preço</label>
+            <select class="field" id="price"></select>
+            <label class="visually-hidden" for="search" data-i18n="common.search">Buscar</label>
+            <input class="field search" id="search" type="search" autocomplete="off" data-i18n-ph="common.search">
+            <span class="result-count" id="count" aria-live="polite"></span>
+          </div>
+          <div class="grid" id="places-grid"></div>
+          <p class="note" style="margin-top:1.5rem" data-i18n="common.confirm">Informações ilustrativas — confirme horários, preços e disponibilidade nos canais oficiais antes de ir.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/data/food-data.js"></script>
+  <script src="js/data/photos-data.js"></script>
+  <script src="js/pages/food.js"></script>
+</body>
+</html>

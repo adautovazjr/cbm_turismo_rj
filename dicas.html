@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title.tips">Dicas para passear · Rio Viva</title>
+  <meta name="description" content="Dicas, roteiros e checklist para passear no Rio de Janeiro." data-i18n-content="meta.desc.tips">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="tips">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumb"><a href="index.html" data-i18n="nav.home">Início</a> / <span data-i18n="nav.tips">Dicas</span></div>
+        <h1 data-i18n="tips.title">Dicas para passear pelo Rio</h1>
+        <p data-i18n="tips.intro">Informações práticas, roteiros prontos e um checklist de mala para aproveitar a cidade com tranquilidade.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem">
+      <div class="container">
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab" role="tab" data-tab="essentials" id="tab-essentials" aria-controls="panel-essentials" aria-selected="true" data-i18n="tips.tab.essentials">Dicas essenciais</button>
+          <button type="button" class="tab" role="tab" data-tab="itineraries" id="tab-itineraries" aria-controls="panel-itineraries" aria-selected="false" data-i18n="tips.tab.itineraries">Roteiros</button>
+          <button type="button" class="tab" role="tab" data-tab="checklist" id="tab-checklist" aria-controls="panel-checklist" aria-selected="false" data-i18n="tips.tab.checklist">Checklist de mala</button>
+        </div>
+
+        <div class="tab-panel" id="panel-essentials" role="tabpanel" aria-labelledby="tab-essentials">
+          <div class="accordion" id="accordion"></div>
+        </div>
+
+        <div class="tab-panel" id="panel-itineraries" role="tabpanel" aria-labelledby="tab-itineraries" hidden>
+          <div class="toolbar">
+            <div class="chips" id="trip-chips" role="group" data-i18n-aria="tips.tab.itineraries">
+              <button type="button" class="chip" data-trip="d1" aria-pressed="false" data-i18n="tips.trip.d1">1 dia</button>
+              <button type="button" class="chip" data-trip="d3" aria-pressed="true" data-i18n="tips.trip.d3">3 dias</button>
+              <button type="button" class="chip" data-trip="d5" aria-pressed="false" data-i18n="tips.trip.d5">5 dias</button>
+            </div>
+          </div>
+          <div class="itinerary" id="itinerary"></div>
+        </div>
+
+        <div class="tab-panel" id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" hidden>
+          <div class="section-head">
+            <h2 data-i18n="tips.check.title">O que levar</h2>
+            <p data-i18n="tips.check.sub">Marque o que já separou — seu progresso fica salvo neste navegador.</p>
+          </div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"><div id="progress-bar"></div></div>
+          <p class="note" id="progress-text" aria-live="polite"></p>
+          <ul class="checklist" id="checklist"></ul>
+          <p style="margin-top:1.2rem"><button type="button" class="btn btn-dark btn-sm" id="reset-list" data-i18n="tips.check.reset">Limpar lista</button></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/data/tips-data.js"></script>
+  <script src="js/pages/tips.js"></script>
+</body>
+</html>

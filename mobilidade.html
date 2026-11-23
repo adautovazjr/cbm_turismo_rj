@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title.mobility">Aeroportos e mobilidade · Rio Viva</title>
+  <meta name="description" content="Aeroportos e mobilidade urbana no Rio de Janeiro." data-i18n-content="meta.desc.mobility">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="mobility">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumb"><a href="index.html" data-i18n="nav.home">Início</a> / <span data-i18n="nav.mobility">Mobilidade</span></div>
+        <h1 data-i18n="mob.title">Aeroportos e mobilidade urbana</h1>
+        <p data-i18n="mob.intro">Saiba como chegar ao Rio, ir do aeroporto ao seu bairro e se deslocar pela cidade com praticidade.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem">
+      <div class="container">
+        <div class="section-head"><h2 data-i18n="mob.airports">Aeroportos</h2></div>
+        <div class="two-col" id="airports"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="mob.plan.title">Do aeroporto ao seu bairro</h2>
+          <p data-i18n="mob.plan.sub">Escolha o aeroporto e o destino para comparar as opções de transporte.</p>
+        </div>
+        <div class="planner">
+          <div class="planner-form">
+            <label><span data-i18n="mob.plan.from">Aeroporto</span><select class="field" id="pl-airport"></select></label>
+            <label><span data-i18n="mob.plan.to">Destino</span><select class="field" id="pl-dest"></select></label>
+          </div>
+          <h3 id="pl-title" aria-live="polite"></h3>
+          <div class="options" id="pl-options"></div>
+          <p class="note" style="margin-top:1rem" data-i18n="mob.plan.note">Tempos e custos são estimativas e variam com trânsito, horário e demanda. Evite os horários de pico (7h–9h e 17h–20h).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="mob.urban.title">Como se deslocar pela cidade</h2>
+          <p data-i18n="mob.urban.sub">Do metrô às barcas: conheça os modais mais úteis para turistas.</p>
+        </div>
+        <div class="grid" id="urban"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="mob.metro.title">Linhas do metrô</h2>
+          <p data-i18n="mob.metro.sub">Estações principais para turistas (em destaque). Consulte o mapa oficial para o trajeto completo e horários.</p>
+        </div>
+        <div class="lines" id="metro"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2 data-i18n="mob.tips.title">Dicas de mobilidade</h2></div>
+        <div class="callout"><ul id="mob-tips" style="margin:0;padding-left:1.1rem"></ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/data/mobility-data.js"></script>
+  <script src="js/pages/mobility.js"></script>
+</body>
+</html>
